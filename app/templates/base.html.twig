@@ -2,15 +2,94 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
-
-        {% block javascripts %}
-        {% endblock %}
+        <title>
+            {% block PageTitle %}
+                Welcome!           
+            {% endblock %}
+        </title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{{ asset('/node_modules/bootstrap/dist/css/bootstrap.css') }}">
+        <!-- CSS supplémentaires -->
+        <link rel="stylesheet" href="{{ asset('assets/css/base.css') }}">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     </head>
+        {% block stylesheets %}{% endblock %}
     <body>
-        {% block body %}{% endblock %}
+        <nav class="navbar custom-navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="#">
+                <img src="{{ asset('assets/images/logo2.png') }}" alt="Logo" style="height: 50px;"> 
+            </a>
+    
+            {# Bouton pour les écrans plus petits #}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            {# Contenu de la barre de navigation #}
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">ACCUEIL</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">JEU DU JOUR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">COMMUNAUTÉ</a>
+                    </li>
+                </ul>
+                {# Espace occupé par le nom d'utilisateur à droite #}
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            USERNAME <i class="fas fa-user-circle"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#">Profil</a>
+                            <a class="dropdown-item" href="#">Paramètres</a>
+                            <a class="dropdown-item" href="#">Déconnexion</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        {% block body %} {% endblock %}
+        {% block scripts %}{% endblock %}
+
+    <!-- Inclure jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Inclure Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <!-- Inclure Bootstrap JS -->
+    <script src="{{ asset('/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     </body>
+    <footer class="fixed-bottom unique-footer-design">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="footer-content text-light text-center py-3">
+                <div class="social-icons">
+                    <a href="#" class="text-light mx-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="footer-text mb-0">Rejoignez notre communauté et explorez le monde des mots!</p>
+                <p class="copyright mb-0">&copy; {{ "now"|date("Y") }} Z-A Daily-Word, tous droits réservés Rick Georges YELEUMEU</p>
+                <div class="footer-links">
+                    <a href="#" class="text-light mx-2">FAQ</a>|
+                    <a href="#" class="text-light mx-2">Règles du jeu</a>|
+                    <a href="#" class="text-light mx-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
 </html>

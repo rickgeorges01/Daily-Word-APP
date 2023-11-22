@@ -1,0 +1,135 @@
+/* Import de la police Google Roboto Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+/* Application de la police et réglages de base pour le corps du document */
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    /* Taille de police de base pour la lisibilité */
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    padding-top: 100px; 
+}
+
+/* Style de la barre de navigation */
+.custom-navbar {
+    background-color: #000;
+    border-bottom: 3px solid #4CAF50;
+    position: fixed; /* Ajouté pour fixer la navbar */
+    top: 0; /* Ajouté pour aligner la navbar en haut de la page */
+    width: 100%; /* Ajouté pour s'assurer que la navbar s'étend sur toute la largeur */
+    z-index: 1000; /* Ajouté pour s'assurer que la navbar reste au-dessus */
+}
+
+/* Liens de la barre de navigation */
+.custom-navbar .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+/* Hover des liens de la barre de navigation */
+.custom-navbar .nav-link:hover {
+    color: #4CAF50;
+}
+
+/* Gestion de l'espacement pour le menu utilisateur */
+.custom-navbar .navbar-nav.ml-auto {
+    margin-left: auto;
+}
+
+/* Style du bouton toggle en mode responsive */
+.custom-navbar .navbar-toggler {
+    border-color: #4CAF50;
+}
+
+/* Style du menu déroulant */
+.custom-navbar .dropdown-menu {
+    background-color: #333;
+}
+
+/* Éléments du menu déroulant */
+.custom-navbar .dropdown-item {
+    color: #fff;
+}
+
+/* Hover des éléments du menu déroulant */
+.custom-navbar .dropdown-item:hover {
+    background-color: #4CAF50;
+}
+
+/* Icône du profil utilisateur */
+.custom-navbar .fas.fa-user-circle {
+    margin-left: 5px;
+}
+
+/* Style du footer */
+.unique-footer-design {
+    background-color: #000;
+    border-top: 5px solid #4CAF50;
+    color: #ffffff;
+}
+
+/* Contenu du footer */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icônes des réseaux sociaux dans le footer */
+.social-icons a {
+    font-size: 1.5em;
+}
+
+/* Hover des icônes des réseaux sociaux */
+.social-icons a:hover {
+    color: #4CAF50 !important;
+}
+
+/* Texte dans le footer */
+.footer-text {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+
+/* Liens dans le footer */
+.footer-links a {
+    text-decoration: none;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Hover des liens dans le footer */
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #4CAF50 !important;
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 991px) {
+    .custom-navbar .navbar-nav .nav-link {
+        margin-right: 0.5rem;
+
+        .social-icons a,
+        .footer-links a {
+            font-size: 1em;
+        }
+
+        .footer-text {
+            font-size: 0.9em;
+        }
+    }
+
+}
+
+/* Responsivité pour les très petits écrans */
+@media (max-width: 576px) {
+    .custom-navbar .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
+}

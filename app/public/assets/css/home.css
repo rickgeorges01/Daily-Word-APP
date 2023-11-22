@@ -1,0 +1,63 @@
+#calendar-container {
+    /* Utiliser toute la largeur disponible */
+    width: 100%;
+    /* ou toute autre largeur maximale souhaitée */
+    max-width: 900px;
+    /* Couleur de fond pour la zone du calendrier */
+    background: linear-gradient(45deg, #4CAF50, #000000, #7A7256);
+   /* Centrer dans le conteneur avec une marge supérieure et inférieure */
+    margin: 20px auto;
+    border: 1px solid #ffffff;
+    /* Espacement intérieur */
+    padding: 10px;
+    
+}
+
+table {
+    width: 100%;
+    /* Le tableau occupe tout l'espace du conteneur */
+    height: auto;
+    /* Hauteur automatique en fonction du contenu */
+    border-collapse: collapse;
+    /* Pas d'espace entre les cellules */
+}
+
+th {
+    /* background: linear-gradient(45deg, #4CAF50, #000000, #7A7256); Couleur de fond pour les en-têtes */
+    color: #ffffff;
+    /* Texte blanc pour les en-têtes */
+}
+
+td,
+th {
+    border: 1px solid #ffffff;
+    /* Bordure noire pour les cellules */
+    text-align: center;
+    /* Centrer le texte dans les cellules */
+    padding: 8px;
+    /* Espacement intérieur pour les cellules */
+}
+
+/* Responsivité calendrier */
+@media (max-width: 768px) {
+    #calendar-container {
+        padding: 5px;
+    }
+
+    td,
+    th {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    #calendar-container {
+        margin: 10px auto;
+    }
+
+    td,
+    th {
+        padding: 3px;
+    }
+
+} 

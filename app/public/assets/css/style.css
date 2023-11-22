@@ -1,0 +1,51 @@
+/* Import de la police Google Roboto Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+/* Application de la police et réglages de base pour le corps du document */
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    /* Taille de police réglementaire standard pour le web */
+    line-height: 1.6;
+    /* Espacement des lignes standard */
+    color: #333;
+    /* Couleur de texte standard */
+    margin: 0;
+    padding: 0;
+}
+.lead {
+    text-align: center; 
+    font-weight: bold; 
+}
+.button-connect {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7A7256;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-connect:hover {
+    background-color: #000000;
+
+}
+
+.form-control {
+    border: 2px solid #4CAF50;
+}
+
+.password-reset,
+.password-reset:visited {
+
+    color: #000000;
+
+}
+
+.password-reset:hover {
+    color: #7A7256;
+
+}

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block PageTitle %}
+    Acceuil 
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Bienvenue sur Daily Word, Username</h1>
+
+        <p>Devinez le mot du jour en 8 essais !</p>
+
+        <h1> Grille du mois</h1>
+
+        <div id="calendar-container"></div>
+
+        <h1>Votre classement</h1>
+        <div class="ranking-table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Rang</th>
+                        <th>Nom & Prénoms</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {# 
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.rank }}</td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.points }}</td>
+                        </tr>
+                    {% endfor %} #}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="{{ asset('assets/js/calendar.js') }}"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    createCalendar("calendar-container");
+  });
+</script>
+{% endblock %}
