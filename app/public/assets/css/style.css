@@ -13,10 +13,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.lead {
-    text-align: center; 
-    font-weight: bold; 
-}
+
 .button-connect {
     width: 100%;
     padding: 10px;
@@ -34,8 +31,25 @@ body {
 
 }
 
+.button-other {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-other:hover {
+    background-color: #4CAF50;
+}
+
+
 .form-control {
-    border: 2px solid #4CAF50;
+    border: 2px solid #4CAF50
 }
 
 .password-reset,

@@ -15,7 +15,7 @@
     <div class="card p-4" style="max-width: 500px; width: 100%;">
         <div class="card-body text-center">
             <img src="{{ asset('assets/images/logo1.png') }}" alt="Logo" style="max-width: 250px; height: auto; margin-bottom: 20px;">
-            <p class="lead">Connecte toi pour découvrir le mot du jour</p>
+            <p ><strong>Connecte toi pour découvrir le mot du jour</strong></p>
 
             <form method="post">
                 {% if error %}
@@ -42,7 +42,7 @@
 
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-                <button type="submit" class="button-connect">CONNECT</button>
+                <button type="submit" class="button-connect">CONNEXION</button>
                 <div class="text-center my-3">
                     <span>OU</span>
                 </div>
