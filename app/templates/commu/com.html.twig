@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block PageTitle %}
+    Communauté 
+        
+    
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/commu.css') }}">
+    {% endblock %}
+    {% block body %}
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-white sidebar">
+            <!-- Sidebar content -->
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <span class="sidebar-text">
+                    Invitations    
+                                    
+                </span>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <span class="sidebar-text">
+                    Suggestions   
+                                    
+                </span>
+                <div class="sidebar-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <i class="fas fa-user-friends"></i>
+                </div>
+                <span class="sidebar-text">
+                    Tou(tes)s les amies 
+                                    
+                </span>
+                <div class="sidebar-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+
+            <a href="#" class="sidebar-item">
+                <div class="sidebar-icon">
+                    <i class="fa-solid fa-ranking-star"></i>
+                </div>
+                <span class="sidebar-text">
+                    Classements  
+                                
+                </span>
+                <div class="sidebar-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </a>
+        </div>
+    {% endblock %}
+    {% block scripts %}
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    {% endblock %}
+    

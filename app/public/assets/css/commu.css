@@ -1,0 +1,35 @@
+.sidebar {
+    width: 320px;
+    min-height: 100vh;
+    border-right: 1px solid #ccc;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar-item:hover {
+    background-color: #f8f9fa;
+    text-decoration: none;
+}
+
+.sidebar-icon {
+    width: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.sidebar-text {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.sidebar-arrow {
+    font-size: 16px;
+}
