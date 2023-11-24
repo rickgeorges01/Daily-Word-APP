@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
+    <title>Connexion Daily Word</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('/node_modules/bootstrap/dist/css/bootstrap.css') }}">
     <!-- Custom CSS -->
@@ -14,27 +14,41 @@
 <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
     <div class="card p-4" style="max-width: 500px; width: 100%;">
         <div class="card-body text-center">
-        <img src="{{ asset('assets/images/logo1.png') }}" alt="Logo" style="max-width: 250px; height: auto; margin-bottom: 20px;">
-            {# <h3 class="card-title mb-4">DAILY WORD</h3> #}
+            <img src="{{ asset('assets/images/logo1.png') }}" alt="Logo" style="max-width: 250px; height: auto; margin-bottom: 20px;">
             <p class="lead">Connecte toi pour découvrir le mot du jour</p>
-            <form>
+
+            <form method="post">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                {% if app.user %}
+                    <div class="mb-3">
+                        You are logged in as {{ app.user.firstname }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    </div>
+                {% endif %}
+
                 <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Adresse email ou Numéro de téléphone">
+                    <input type="email" value="{{ last_username }}" name="email" class="form-control" placeholder="Adresse email ou Numéro de téléphone" autocomplete="email" required autofocus>
                 </div>
                 <div class="mb-3">
-                    <input type="password" class="form-control" placeholder="Mot de passe">
+                    <input type="password" name="password" class="form-control" placeholder="Mot de passe" autocomplete="current-password" required>
                     <div class="text-end"> 
                         <small>
                             <a href="#" class="password-reset">Forgot password?</a>
                         </small>
                     </div>
                 </div>
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
                 <button type="submit" class="button-connect">CONNECT</button>
                 <div class="text-center my-3">
                     <span>OU</span>
                 </div>
                 <button type="button" class="btn btn-success w-100">CRÉER UN COMPTE</button>
             </form>
+
         </div>
     </div>
 </div>
